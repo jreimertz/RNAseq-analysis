@@ -3,7 +3,7 @@
 #' 
 
 # Set the maximum file upload size
-options(shiny.maxRequestSize = 30 * 1024^2)
+options(shiny.maxRequestSize = 50 * 1024^2)
 # Import functions and all dependent libraries
 source("all_functions.R")
 
@@ -207,10 +207,10 @@ ui <- fluidPage(
     ##### Third Page #####
     # The third page explores differential expression analysis results either
     # from a file uploaded by the user or performs differential expression 
-    # analysis using Limma on the uploaded normalized counts data
+    # analysis using DESeq2 on the uploaded normalized counts data
     tabPanel("Differential Expression",
              sidebarLayout(
-               sidebarPanel(h4("Differential Expresison"),
+               sidebarPanel(h4("Differential Expression"),
                p("On this page you can explore the results of differential 
                expression analysis. Either upload results of an already completed 
                analysis or differential expression can be performed using the 

@@ -14,8 +14,6 @@ library(colourpicker)
 library(pheatmap)
 library(ggbeeswarm)
 library(DESeq2)
-library(limma)
-library(edgeR)
 library(pheatmap)
 library(igraph)
 library(tidyverse)
@@ -335,13 +333,15 @@ make_diag_plot <- function(count_data, filtered_count_data, filtered_genes, plot
       ggplot(aes(x=med_counts, y=var_counts, color=filtered)) +
       geom_point(alpha=0.8) + scale_x_continuous(trans = "log10") + 
       scale_y_continuous(trans = "log10") +
-      scale_color_manual(values = c("#07a6ab","#5536d3"))
+      scale_color_manual(values = c("#07a6ab","#5536d3")) +
+      labs(x = "Median Count", y = "log10(Variance)")
   }
   else {
     p <- full_counts %>% 
       ggplot(aes(x=med_counts, y=total_counts, color=filtered)) +
       geom_point(alpha=0.8) + scale_x_continuous(trans = "log10") + 
-      scale_color_manual(values = c("#07a6ab","#5536d3"))
+      scale_color_manual(values = c("#07a6ab","#5536d3")) +
+      labs(x = "log10(Median Count)", y = "Number of Zero Counts")
   }
   
   return(p)
