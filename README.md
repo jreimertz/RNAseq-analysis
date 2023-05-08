@@ -31,7 +31,7 @@ This application can be run locally by downloading the project on this github
 repository and has also been published at 
 <a href="https://jreimertz.shinyapps.io/main/">RNA-seq Analysis</a>
 Additionally, a demo recording of this application use can be found
-<a href=""></a><br><br>
+<a href="https://youtu.be/IfnhUCnUapk"></a><br><br>
 
 ## Purpose
 
